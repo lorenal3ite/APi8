@@ -14,7 +14,7 @@ def cadastrar_cliente():
     telefone = data.get('telefone')
 
     if not nome or not email or not telefone:
-        return jsonify({"error": "Todos os campos são obrigatórios"}), 400
+        return jsonify({"erro": "Todos os campos são obrigatórios"}), 400
 
     cliente = Cliente(nome=nome, email=email, telefone=telefone)
     db.session.add(cliente)
